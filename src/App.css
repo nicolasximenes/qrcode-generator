@@ -6,8 +6,13 @@
 
 .App {
   padding: 1rem;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .app-name {
@@ -37,6 +42,11 @@
   background: #0F142B;
 }
 
+.input-field:focus {
+  border: 1px solid #3e40aa;
+  box-shadow: 0 0 1px 1px rgba(62, 64, 170, 0.3);
+}
+
 .btn-gen {
   padding:  6px 10px;
   background: var(--primary-color);
@@ -53,10 +63,27 @@
 .qrcode-container {
   display: block;
   width: 300px;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.qrcode-container.empty {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  width: 300px; 
+  height: 300px; 
+  text-align: center; 
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.qrcode-container.empty p {
+  color: grey;
 }
 
 .qrcode-container img {
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .btn-download {

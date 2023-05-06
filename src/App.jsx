@@ -25,29 +25,21 @@ function App() {
   return (
     <div className="App">
       
-      <h1 className="app-name">QR Code Generator by NX Dev</h1>
+      <h1 className="app-name">QR Code Generator</h1>
       <p className="app-desc">This app will generate link you paste in</p>
       
-      <form
-        className="form"
-        onSubmit={generateQRcode}
-      >
+      <form className="form" onSubmit={generateQRcode}>
         <input
           type="url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           className="input-field"
-          placeholder="paste your link"
+          placeholder="Insert your link here"
         />
-        <button
-          type="submit"
-          className="btn-gen"
-        >
-          Generate
-        </button>
+        <button type="submit" className="btn-gen">Generate</button>
       </form>
-      
-      {qrcode && (
+
+      {/* {qrcode && (
         <div className="qrcode-container">
           <img src={qrcode} alt="qrcode-img" />
           <a
@@ -55,6 +47,19 @@ function App() {
             download="qrcode"
             className="btn-download"
           >
+            <span>Download</span>
+          </a>
+        </div>
+      )} */}
+      
+      {!qrcode ? (
+        <div className="qrcode-container empty">
+          <p>Your QR Code appears here.</p>
+        </div>
+      ) : (
+        <div className="qrcode-container">
+          <img src={qrcode} alt="qrcode-img" />
+          <a href={qrcode} download="qrcode" className="btn-download">
             <span>Download</span>
           </a>
         </div>
