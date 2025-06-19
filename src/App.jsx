@@ -25,8 +25,8 @@ function App() {
   return (
     <div className="App">
       
-      <h1 className="app-name">QR Code Generator</h1>
-      <p className="app-desc">This app will generate link you paste in</p>
+      <h1 className="app-name">Gerador de código QR</h1>
+      <p className="app-desc">Este aplicativo irá gerar um código QR com o link que você inserir.</p>
       
       <form className="form" onSubmit={generateQRcode}>
         <input
@@ -34,9 +34,9 @@ function App() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           className="input-field"
-          placeholder="Insert your link here"
+          placeholder="Insira seu link aqui"
         />
-        <button type="submit" className="btn-gen">Generate</button>
+        <button type="submit" className="btn-gen">Gerar</button>
       </form>
 
       {/* {qrcode && (
@@ -54,13 +54,13 @@ function App() {
       
       {!qrcode ? (
         <div className="qrcode-container empty">
-          <p>Your QR Code appears here.</p>
+          <p>Seu código QR aparece aqui.</p>
         </div>
       ) : (
         <div className="qrcode-container">
           <img src={qrcode} alt="qrcode-img" />
           <a href={qrcode} download="qrcode" className="btn-download">
-            <span>Download</span>
+            <span>Baixar</span>
           </a>
         </div>
       )}
