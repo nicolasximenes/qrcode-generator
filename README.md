@@ -1,7 +1,7 @@
-# Basic QR Code Generator App
+# Aplicativo básico gerador de código QR
 
-This app will generate link you paste in.
+Este aplicativo irá gerar um código QR com o link que você inserir.
 
-## About this project
+## Sobre este projeto
 
-This is a simple project that uses React and QRCode.
+Este é um projeto simples que usa React e QRCode.
